@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Это будет консольное приложение (Exe) -->
+    <OutputType>Exe</OutputType>
+    
+    <!-- Используем последнюю версию .NET для лучшей производительности -->
+    <TargetFramework>net8.0</TargetFramework>
+    
+    <!-- Включаем стандартные современные фичи .NET -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    
+    <!--
+      КРИТИЧЕСКИ ВАЖНО: Разрешаем использование unsafe-кода.
+      Это необходимо для работы с MemoryMappedFile и указателями.
+    -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    
+    <!-- Используем последнюю версию языка C# -->
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      Добавляем зависимость для парсинга аргументов командной строки.
+      `dotnet build` автоматически скачает эту библиотеку из NuGet.
+    -->
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+  </ItemGroup>
+
+</Project>
