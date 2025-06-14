@@ -5,4 +5,4 @@ I used Gemini 2.5 Pro Preview to port this Rust repo: https://github.com/samuel-
 
 You can build project by double clicking on build.bat
 
-To run project you should double click on launch.bat.
+To run project you should double click on launch.bat. By default it supposed that you called llm file "model.bin". Otherwise you will need to edit launch.but accordingly.
